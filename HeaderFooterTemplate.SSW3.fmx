@@ -1,0 +1,45 @@
+inherited HeaderFooterForm_SSW3: THeaderFooterForm_SSW3
+  ClientHeight = 183
+  ClientWidth = 183
+  DesignerMasterStyle = 3
+  inherited Header: TToolBar
+    Size.Width = 183.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 183.000000000000000000
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 135.000000000000000000
+    Size.Width = 183.000000000000000000
+  end
+  inherited ParentLayout: TLayout
+    Size.Width = 183.000000000000000000
+    Size.Height = 87.000000000000000000
+    inherited Uppercase: TLayout
+      inherited swUpper: TSwitch
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Lowercase: TLayout
+      inherited swLower: TSwitch
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Password: TLayout
+      Position.Y = 328.000000000000000000
+      inherited edtPassword: TEdit
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Numbers: TLayout
+      inherited swNumbers: TSwitch
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited SpecialChars: TLayout
+      inherited swChars: TSwitch
+        Size.Height = 38.000000000000000000
+      end
+    end
+  end
+end

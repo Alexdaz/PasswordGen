@@ -1,0 +1,288 @@
+object HeaderFooterForm: THeaderFooterForm
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 501
+  ClientWidth = 420
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 420.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claDeepskyblue
+    object HeaderLabel: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 420.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'PasswordGen'
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 453.000000000000000000
+    Size.Width = 420.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    TintColor = claDeepskyblue
+  end
+  object ParentLayout: TLayout
+    Align = Client
+    Size.Width = 420.000000000000000000
+    Size.Height = 405.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object Length: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      ClipChildren = True
+      ClipParent = True
+      Position.Y = 48.000000000000000000
+      Size.Width = 420.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object nbValue: TNumberBox
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = []
+        TabOrder = 7
+        Cursor = crIBeam
+        Value = 8.000000000000000000
+        Position.X = 175.782180786132800000
+        Position.Y = 10.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lblLength: TLabel
+        ClipChildren = True
+        ClipParent = True
+        StyledSettings = [Family, Size, Style]
+        Position.X = 102.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 58.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claDeepskyblue
+        Text = 'Largo:'
+        TabOrder = 8
+      end
+    end
+    object GB1: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      ClipChildren = True
+      ClipParent = True
+      Position.X = 8.000000000000000000
+      Position.Y = 106.000000000000000000
+      Size.Width = 404.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object btnCopy: TButton
+        Align = MostRight
+        ClipChildren = True
+        ClipParent = True
+        StyledSettings = [Family, Size, Style]
+        Position.X = 216.000000000000000000
+        Size.Width = 188.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Copiar'
+        TextSettings.FontColor = claWhite
+        TintColor = claDeepskyblue
+        OnClick = btnCopyClick
+      end
+      object btnGenPassword: TButton
+        Align = MostLeft
+        ClipChildren = True
+        ClipParent = True
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 177.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Generar Password'
+        TextSettings.FontColor = claWhite
+        TintColor = claDeepskyblue
+        OnClick = btnGenPasswordClick
+      end
+    end
+    object Uppercase: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      ClipChildren = True
+      ClipParent = True
+      Position.X = 8.000000000000000000
+      Position.Y = 201.000000000000000000
+      Size.Width = 404.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      object lblUpper: TLabel
+        Align = MostLeft
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 177.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claDeepskyblue
+        Text = 'MAY'#218'SCULAS (A - Z)'
+        TabOrder = 0
+      end
+      object swUpper: TSwitch
+        Align = MostRight
+        IsChecked = False
+        Position.X = 360.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object GB2: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      ClipChildren = True
+      ClipParent = True
+      Position.X = 8.000000000000000000
+      Position.Y = 145.000000000000000000
+      Size.Width = 404.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      object btnDelete: TButton
+        Align = Contents
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 404.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Borrar'
+        TextSettings.FontColor = claWhite
+        TintColor = claRed
+        OnClick = btnDeleteClick
+      end
+    end
+    object Lowercase: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      ClipChildren = True
+      ClipParent = True
+      Position.X = 8.000000000000000000
+      Position.Y = 249.000000000000000000
+      Size.Width = 404.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      object lblLower: TLabel
+        Align = MostLeft
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 153.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claDeepskyblue
+        Text = 'min'#250'sculas (a - z)'
+        TabOrder = 0
+      end
+      object swLower: TSwitch
+        Align = MostRight
+        IsChecked = False
+        Position.X = 360.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object Password: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      ClipChildren = True
+      ClipParent = True
+      Position.X = 8.000000000000000000
+      Size.Width = 404.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      object edtPassword: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Contents
+        TabOrder = 4
+        TextSettings.HorzAlign = Center
+        ClipChildren = True
+        Size.Width = 404.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Numbers: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      ClipChildren = True
+      ClipParent = True
+      Position.X = 8.000000000000000000
+      Position.Y = 297.000000000000000000
+      Size.Width = 404.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      object lblNumbers: TLabel
+        Align = MostLeft
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 129.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claDeepskyblue
+        Text = 'N'#250'meros (0 -9)'
+        TabOrder = 0
+      end
+      object swNumbers: TSwitch
+        Align = MostRight
+        IsChecked = False
+        Position.X = 360.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object SpecialChars: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      ClipChildren = True
+      ClipParent = True
+      Position.X = 8.000000000000000000
+      Position.Y = 345.000000000000000000
+      Size.Width = 404.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+      object lblSpecialChars: TLabel
+        Align = MostLeft
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 193.000000000000000000
+        Size.Height = 38.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claDeepskyblue
+        Text = 'Caracteres especiales'
+        TabOrder = 0
+      end
+      object swChars: TSwitch
+        Align = MostRight
+        IsChecked = False
+        Position.X = 360.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+  end
+end
