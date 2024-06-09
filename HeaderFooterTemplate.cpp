@@ -17,6 +17,7 @@
 #endif
 
 #define EMPTY ""
+#define COLORBAR -16346689
 
 #pragma hdrstop
 
@@ -53,9 +54,12 @@ std::string RandomPassword(int Chars, std::string pass)
 __fastcall THeaderFooterForm::THeaderFooterForm(TComponent* Owner)
 	: TForm(Owner)
 {
-    TAndroidHelper::Activity->getWindow()->setStatusBarColor(-16346689);
+    #ifdef __ANDROID__
+    TAndroidHelper::Activity->getWindow()->setStatusBarColor(COLORBAR);
+    #endif
 }
 //---------------------------------------------------------------------------
+
 void __fastcall THeaderFooterForm::btnCopyClick(TObject *Sender)
 {
     edtPassword->SelectAll();
@@ -69,7 +73,6 @@ void __fastcall THeaderFooterForm::btnDeleteClick(TObject *Sender)
     nbValue->Value = 8;
 }
 //---------------------------------------------------------------------------
-
 
 void __fastcall THeaderFooterForm::btnGenPasswordClick(TObject *Sender)
 {
