@@ -18,6 +18,7 @@
 
 #define EMPTY ""
 #define COLORBAR -16346689
+#define MINVALUE 8
 
 #pragma hdrstop
 
@@ -36,8 +37,10 @@
 
 THeaderFooterForm *HeaderFooterForm;
 
+typedef unsigned int uint;
+
 //---------------------------------------------------------------------------
-std::string RandomPassword(int Chars, std::string pass)
+std::string RandomPassword(uint Chars, std::string pass)
 {
     std::string result = EMPTY;
 
@@ -70,23 +73,23 @@ void __fastcall THeaderFooterForm::btnCopyClick(TObject *Sender)
 void __fastcall THeaderFooterForm::btnDeleteClick(TObject *Sender)
 {
     edtPassword->Text = EMPTY;
-    nbValue->Value = 8;
+    nbValue->Value = MINVALUE;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall THeaderFooterForm::btnGenPasswordClick(TObject *Sender)
 {
-    if (nbValue->Value < 8)
+    if (nbValue->Value < MINVALUE)
     {
         edtPassword->Text = EMPTY;
-        nbValue->Value = 8;
-        ShowMessage("No se pueden ingresar valores menores a 8.");
+        nbValue->Value = MINVALUE;
+        ShowMessage((UnicodeString)"No se pueden ingresar valores menores a " + MINVALUE + (UnicodeString)".");
     }
     else
     {
         auto numChars = nbValue->Text.ToInt();
 
-    	std::string str = "";
+    	std::string str = EMPTY;
 
         //Password options.
         if (swUpper->IsChecked && swLower->IsChecked && swNumbers->IsChecked && swChars->IsChecked) {
