@@ -1,0 +1,72 @@
+inherited HeaderFooterForm_XLgXhdpiTb: THeaderFooterForm_XLgXhdpiTb
+  ClientHeight = 1255
+  ClientWidth = 800
+  DesignerMasterStyle = 3
+  inherited Header: TToolBar
+    Size.Width = 800.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 800.000000000000000000
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 1207.000000000000000000
+    Size.Width = 800.000000000000000000
+  end
+  inherited ParentLayout: TLayout
+    Size.Width = 800.000000000000000000
+    Size.Height = 1159.000000000000000000
+    inherited Length: TLayout
+      Size.Width = 800.000000000000000000
+      inherited nbValue: TNumberBox
+        Position.X = 360.608917236328100000
+      end
+    end
+    inherited GB1: TLayout
+      Size.Width = 784.000000000000000000
+      inherited btnCopy: TButton
+        Position.X = 596.000000000000000000
+      end
+    end
+    inherited Uppercase: TLayout
+      Size.Width = 784.000000000000000000
+      inherited swUpper: TSwitch
+        Position.X = 740.000000000000000000
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited GB2: TLayout
+      Size.Width = 784.000000000000000000
+      inherited btnDelete: TButton
+        Size.Width = 784.000000000000000000
+      end
+    end
+    inherited Lowercase: TLayout
+      Size.Width = 784.000000000000000000
+      inherited swLower: TSwitch
+        Position.X = 740.000000000000000000
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Password: TLayout
+      Size.Width = 784.000000000000000000
+      inherited edtPassword: TEdit
+        Size.Width = 784.000000000000000000
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Numbers: TLayout
+      Size.Width = 784.000000000000000000
+      inherited swNumbers: TSwitch
+        Position.X = 740.000000000000000000
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited SpecialChars: TLayout
+      Size.Width = 784.000000000000000000
+      inherited swChars: TSwitch
+        Position.X = 740.000000000000000000
+        Size.Height = 38.000000000000000000
+      end
+    end
+  end
+end

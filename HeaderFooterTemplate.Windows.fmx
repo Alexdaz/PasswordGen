@@ -1,0 +1,37 @@
+inherited HeaderFooterForm_Windows: THeaderFooterForm_Windows
+  DesignerMasterStyle = 3
+  inherited ParentLayout: TLayout
+    inherited Uppercase: TLayout
+      inherited swUpper: TSwitch
+        Position.X = 326.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Lowercase: TLayout
+      inherited swLower: TSwitch
+        Position.X = 326.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Password: TLayout
+      Position.Y = 8.000000000000000000
+      Size.Height = 32.000000000000000000
+    end
+    inherited Numbers: TLayout
+      inherited swNumbers: TSwitch
+        Position.X = 326.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited SpecialChars: TLayout
+      inherited swChars: TSwitch
+        Position.X = 326.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 38.000000000000000000
+      end
+    end
+  end
+end

@@ -1,0 +1,45 @@
+inherited HeaderFooterForm_Moto360: THeaderFooterForm_Moto360
+  ClientHeight = 218
+  ClientWidth = 240
+  DesignerMasterStyle = 3
+  inherited Header: TToolBar
+    Size.Width = 240.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 240.000000000000000000
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 170.000000000000000000
+    Size.Width = 240.000000000000000000
+  end
+  inherited ParentLayout: TLayout
+    Size.Width = 240.000000000000000000
+    Size.Height = 122.000000000000000000
+    inherited Uppercase: TLayout
+      inherited swUpper: TSwitch
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Lowercase: TLayout
+      inherited swLower: TSwitch
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Password: TLayout
+      Position.Y = 328.000000000000000000
+      inherited edtPassword: TEdit
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited Numbers: TLayout
+      inherited swNumbers: TSwitch
+        Size.Height = 40.000000000000000000
+      end
+    end
+    inherited SpecialChars: TLayout
+      inherited swChars: TSwitch
+        Size.Height = 38.000000000000000000
+      end
+    end
+  end
+end
