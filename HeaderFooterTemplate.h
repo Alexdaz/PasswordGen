@@ -17,6 +17,8 @@
 #define EMPTY ""
 #define COLORBAR -16346689
 #define MINVALUE 8
+
+typedef unsigned int uint;
 //---------------------------------------------------------------------------
 class THeaderFooterForm : public TForm
 {

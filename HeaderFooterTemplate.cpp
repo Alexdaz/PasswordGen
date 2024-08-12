@@ -32,8 +32,6 @@
 
 THeaderFooterForm *HeaderFooterForm;
 
-typedef unsigned int uint;
-
 //---------------------------------------------------------------------------
 std::string RandomPassword(uint Chars, std::string pass)
 {
@@ -52,7 +50,7 @@ std::string RandomPassword(uint Chars, std::string pass)
     {
         result += pass[randNumberGen() % pass.length()];
     }
-    pass = EMPTY;
+    pass.clear();
 
     return result;
 }
